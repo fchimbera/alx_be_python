@@ -12,4 +12,4 @@ match operation:
         if num1 != 0 and num2 != 0 :
             print(f"The result is {num1 / num2}")
         else:
-            print("Division by ZERO is impossible")
+            print("Cannot divide by zero.")
