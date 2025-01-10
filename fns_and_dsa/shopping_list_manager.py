@@ -14,15 +14,24 @@ def main():
         if choice == '1':
             # Prompt for and add an item
             item = input("Enter the item to add: ")
-            shopping_list.append(item)
+            if item in shopping_list:
+                print(F"{item} is already listed in the shopping list")
+            else:
+                shopping_list.append(item)
         elif choice == '2':
             # Prompt for and remove an item
             item = input("Enter the item to remove: ")
-            shopping_list.remove(item)
+            if item in shopping_list:
+                shopping_list.remove(item)
+            else:
+                print(f"{item} is not availbale in the shopping list")
         elif choice == '3':
             # Display the shopping list
-            for item in shopping_list:
-                print(item)
+            if len(shopping_list) != 0:
+                for item in shopping_list:
+                    print(item)
+            else:
+                print("shopping list is empty")
         elif choice == '4':
             print("Goodbye!")
             break
