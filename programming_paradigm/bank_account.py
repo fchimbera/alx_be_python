@@ -1,6 +1,6 @@
 class BankAccount:
     #initialize account_balance attribute to 0
-    def __init__(self, account_balance):
+    def __init__(self, account_balance = 0):
         self.account_balance = account_balance
     
     def deposit(self, amount):
